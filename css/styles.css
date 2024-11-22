@@ -9,7 +9,7 @@
   --white:#fbfcf8;
 }
 
-* {               /*tira uma faixa em branco que apareceu entre o header e o main*/
+* {               
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,7 +21,7 @@ body{
 }
 
             /*--(Mobile First)--*/
-/*----------------HEADER-------------------*/
+/*===============HEADER===============*/
 header{
   background-image: linear-gradient(to left, var(--dark-blue), var(--dark-blue2));
   font-family: "Oxanium", sans-serif;
@@ -31,7 +31,7 @@ header{
   padding: 0 20px;
   font-size: 20px;
   position: relative;
-  z-index: 10; /*para que o menu mobile apareca*/
+  z-index: 10; /*para que el menu mobile aparezca*/
 }
 .logo{
   width:64px; 
@@ -41,7 +41,7 @@ header{
   display: none;
 }
 .header__checkbox:checked ~ .header__nav{
-  display: flex;                           /*mostra o header__nav*/
+  display: flex;                           /*muestra el header__nav*/
 }
 .header__open-nav-button{
   position: absolute;
@@ -57,7 +57,7 @@ header{
   height: 100vh;
   width: 100vw;
   top: 0;
-  z-index: -1; /*para que o menu mobile apareca*/
+  z-index: -1; /*para que aparezca el menú en mobile*/
 }
 .header__nav-list{
   display: flex;
@@ -91,14 +91,14 @@ header{
   animation: animate 10s linear infinite;
   background-size: 500%;
 }
+/*=============== FIN HEADER===============*/
 
-/*---------------------- FIN HEADER----------------------------*/
 
-/* -------------------- INDEX ----------------------------*/
+/* =============== INDEX ===============*/
 /*generales*/
 main, section, footer{
-  position: relative; /*em relacao ao video*/
-  z-index: 2; /*para ficar na frente do video mas atras do menu mobile*/
+  position: relative; /*en relacion al video*/
+  z-index: 2; /*estar adelante del vídeo pero detrás del menú del móvil*/
 }
 .line{
   background-image: linear-gradient(to right, var(--light-blue), var(--bright-blue));
@@ -146,7 +146,7 @@ main, section, footer{
   width: auto;
   height: auto;
   z-index: 1;
-  transform: translate(-50%, -50%); /* Centraliza o vídeo */
+  transform: translate(-50%, -50%); /* Centraliza el vídeo */
 }
 
 /*------PARTE 1 - Presentacion------*/
@@ -157,9 +157,9 @@ main, section, footer{
   gap: 10px; 
   width: 100%;
   height: auto; 
-  align-items: center; /* Para centralizar verticalmente*/
+  align-items: center; 
   justify-content: center;
-  background-color: #d1d2d885; ;
+  background-color: #d1d2d885;
   background-size: 100% 100%;
   background-attachment: fixed;
 }
@@ -258,10 +258,10 @@ main, section, footer{
   width:50px; 
   height: 50px;
 }
+/* =============== FIN INDEX ===============*/
 
-/* --------------  FIN INDEX -----------------------*/
 
-/*---------------- FOOTER --------------------------*/
+/*=============== FOOTER ===============*/
 footer{
   display: flex;
   flex-direction: column;
@@ -314,9 +314,10 @@ footer{
   color: var(--white);  
 
 }
-/*----------------- FIN DEL FOOTER------------------*/
+/*=============== FIN DEL FOOTER ===============*/
 
-/*-----------------SERVICE PAGE---------------------*/
+
+/*===============SERVICE PAGE ===============*/
 .service-page_backgroud {
   background-color: var(--gray);
   margin: 0; 
@@ -357,10 +358,10 @@ footer{
   margin-left: 10px; 
   color: var(--med-blue);
 }
+/*=============== FIN DEL SERVICE PAGE ===============*/
 
-/*-------------FIN DEL SERVICE PAGE------------------*/
 
-/*-------------ABOUT US PAGE-------------------------*/
+/*=============== ABOUT US PAGE ===============*/
 .aboutus{
   background: linear-gradient(to bottom, var(--dark-blue), var(--dark-blue2), var(--med-blue));
   display: flex;
@@ -438,8 +439,8 @@ transform: translate(-50%, -50%);
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), var(--white));
   z-index: -1;
-  filter: blur(10px); /* Ajusta a intensidade da sombra */
-  transform: translateX(-10px); /* Posiciona a sombra à esquerda */
+  filter: blur(10px); /* Ajusta la intensidad de la sombra */
+  transform: translateX(-10px); /* Coloca la sombra a la izquierda */
 }
 .aboutus__work-button-box h3{
   font-family: "Oxanium", sans-serif;
@@ -457,9 +458,9 @@ transform: translate(-50%, -50%);
   color: var(--med-blue);
   font-weight: bold;
 }
-/*------------- FIN ABOUT US PAGE----------------------*/
+/*===============FIN ABOUT US PAGE===============*/
 
-/*--------------ARTICLES PAGE-------------------------*/
+/*===============ARTICLES PAGE===============*/
 .articles-background{
   background-color: var(--gray);
 }
@@ -568,9 +569,9 @@ transform: translate(-50%, -50%);
   margin-left: auto;
 }
 
-/*-------------- FIN ARTICLES PAGE-------------------------*/
+/*===============FIN ARTICLES PAGE===============*/
 
-/*--------------CONTACT PAGE-------------------------*/
+/*===============CONTACT PAGE===============*/
               /*mobile first*/
 .contac-section{
   display: flex;
@@ -681,11 +682,12 @@ transform: translate(-50%, -50%);
   margin-top: 10px;
 }
 
-/*-------------- FIN CONTACT PAGE-------------------------*/
+/*=============== FIN CONTACT PAGE===============*/
 
-/*----------------------------------------------------RESPONSIVIDAD para TABLET / PC---------------------------------------------------------------------*/
+/* ################################################ RESPONSIVIDAD para TABLET / PC #######################################################*/
 
 @media screen and (min-width: 600px){
+  /*===============HEADER===============*/
   .header__open-nav-button{
     display: none
   }
@@ -706,15 +708,16 @@ transform: translate(-50%, -50%);
     width: 100%;
   }
   .header__nav-list-links{
-    display: flex; /* Flex para os itens à esquerda */
-    justify-content: center; /* Centraliza os itens */
-    flex-grow: 1; /* Permite que ocupe o espaço restante */
+    display: flex; /* Flex para elementos de la izquierda*/
+    justify-content: center;
+    flex-grow: 1; /* Permite ocupar el espacio restante. */
   }
   .header__nav-list li {
     margin: 0 10px;
   }
 
-  /*------ INDEX PARTE 1 - Presentacion ------*/
+  /* =============== INDEX ===============*/
+  /*----------PARTE 1 - Presentacion ------------*/
   .presentation {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -738,7 +741,7 @@ transform: translate(-50%, -50%);
     grid-column: 1 / span 2; 
     grid-row: 2; 
   }
-  /*------ INDEX PARTE 2 - Servicios ------*/
+  /*------------ PARTE 2 - Servicios ------------*/
 
   .services__grid{
     display: grid;
@@ -756,14 +759,14 @@ transform: translate(-50%, -50%);
     border-left: 1px solid var(--dark-blue);
   }
 
-    /*------ INDEX PARTE 3 - WHY SafeBox ------*/
+    /*------------ PARTE 3 - WHY SafeBox ------------*/
   .whysafebox__reasons-wrap{
     display: flex;
     margin-top: 20px;
   }
 
 
-/*---------- CONTACT PAGE----------*/
+/*=============== CONTACT PAGE===============*/
   .contac-section, .other-contact{
     flex-direction: row;
     justify-content: center;
@@ -788,7 +791,7 @@ transform: translate(-50%, -50%);
     max-width: 400px;
   }
 
-  /*------------ ABOUT US PAGE---------*/
+  /*===============ABOUT US PAGE===============*/
 .aboutus{
   display: grid;
   background-color: var(--dark-blue);
@@ -817,8 +820,6 @@ transform: translate(-50%, -50%);
   margin-top: 20px;
 }
 
-
-
 .aboutus__ourvision {
   grid-column: 1 /span 2; 
   grid-row: 2; 
@@ -839,9 +840,7 @@ transform: translate(-50%, -50%);
   width: 50%;
 }
 
-/*------------------ ARTICLES -------------*/
-
-
+/*=============== ARTICLES ===============*/
 .highlights, .all-articles__box{
   flex-direction: row;
 }
@@ -861,7 +860,8 @@ transform: translate(-50%, -50%);
 .all-articles__article-img a:last-child{
   margin-left: 0;
 }
-/*-------------FOOTER---------*/
+
+/*===============FOOTER===============*/
   footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -900,9 +900,9 @@ transform: translate(-50%, -50%);
 }
 
 
-/* para telas > 1600px */
+/* parapantallas > 1600px */
 @media screen and (min-width: 1600px){
-  /*------------ ABOUT US PAGE---------*/
+  /*=============== ABOUT US PAGE===============*/
   .timeline{
     grid-column: 1;
     grid-row: 1;
