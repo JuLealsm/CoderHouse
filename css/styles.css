@@ -17,14 +17,15 @@
 body{
   margin: 0; 
   padding: 0;
-  height: 100%
-}
+  height: 100%;
+  font-size: 20px;
+  font-family: "Oxanium", sans-serif;
+} 
 
             /*--(Mobile First)--*/
 /*===============HEADER===============*/
 header{
   background-image: linear-gradient(to left, var(--dark-blue), var(--dark-blue2));
-  font-family: "Oxanium", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,14 +114,12 @@ main, section, footer{
   font-size: 17px;
 }
 .section-title h2{
-  font-family: "Oxanium", sans-serif;
   font-size: 30px;
 }
 .main-title{
   margin: 0;
   line-height: 1;
   font-size: 60px;
-  font-family: "Oxanium", sans-serif;
   font-weight: 600;
   color: transparent;
   background-clip: text;
@@ -227,7 +226,6 @@ main, section, footer{
   height: 54px;
 }
 .services__title{
-  font-family: "Oxanium", sans-serif;
   font-size: 15px;
   padding-bottom: 10px;
   color: var(--dark-blue);
@@ -240,6 +238,9 @@ main, section, footer{
   background-color: #e5e5e5ba;
   margin: 10px;
   color: var(--dark-blue);
+}
+.whysafebox p:first-child{
+  padding-top: 50px;
 }
 .whysafebox__reasons-wrap{
   justify-items: center;
@@ -287,11 +288,10 @@ footer{
 .footer__nav a, .footer__TC-links a{
   text-decoration: none;
   color: var(--white);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .footer__nav h4{
-  font-family: "Oxanium", sans-serif;
   font-size: 12px;
   color: var(--bright-blue);
   padding-top: 20px;
@@ -318,43 +318,45 @@ footer{
 
 
 /*===============SERVICE PAGE ===============*/
-.service-page_backgroud {
+.service-page_backgroud{
   background-color: var(--gray);
   margin: 0; 
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 .service-page__title{
-  font-family: "Oxanium", sans-serif;
   color: var(--med-blue);
   text-align: center;
   margin: 0;
   padding-bottom: 30px;
 }
-.service-page__details {
+.service-page__details{
   border: 1px solid var(--bright-blue); 
   border-radius: 5px; 
   padding: 10px; 
   margin: 0 auto; 
-  width: 90%;
   background-color: var(--white);
-
+}
+.service-page__details p{
+ font-size: 15px;
 }
 .service-page__summary{
-  font-family: "Oxanium", sans-serif;
   list-style: none;
   cursor: pointer; 
   padding: 5px; 
   height: 70px;
+  font-size: 15px;
 }
-.service-page__summary img {
+.service-page__summary img{
   vertical-align: middle;
 }
 .services__icon,
-.expand-icon {
+.expand-icon{
     display: inline-block; /*para centralizar verticalmente*/
     vertical-align: middle; 
 }
-.expand-icon {
+.expand-icon{
   margin-left: 10px; 
   color: var(--med-blue);
 }
@@ -369,10 +371,11 @@ footer{
   gap: 50px;
 }
 
-.aboutus__video {
-  position: relative;
+.aboutus__video{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
 }
 .aboutus__video video{
   margin: 5%;
@@ -380,18 +383,12 @@ footer{
 }
 
 .aboutus__title, .aboutus__ourvision-title{
-  font-family: "Oxanium", sans-serif;
   color: var(--med-blue);
 }
 .aboutus__title{
-position: absolute;
-background-color: var(--white);
-font-size: 2em;
-z-index: 1;
-padding: 10px 20px;
-top: 15%;
-left: 20%;
-transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #fbfcf8, #fbfcf865);
+  margin-top: 30px;
+  padding: 20px;
 }
 /*carousel*/
 .carousel{
@@ -399,7 +396,6 @@ transform: translate(-50%, -50%);
 }
 .carousel-title{
   display: inline-block;
-  font-family: "Oxanium", sans-serif;
   color: var(--dark-blue);
   background-color: var(--gray);
   padding: 10px;
@@ -443,7 +439,6 @@ transform: translate(-50%, -50%);
   transform: translateX(-10px); /* Coloca la sombra a la izquierda */
 }
 .aboutus__work-button-box h3{
-  font-family: "Oxanium", sans-serif;
   color: var(--dark-blue);
   padding-bottom: 30px;
 }
@@ -454,7 +449,6 @@ transform: translate(-50%, -50%);
   padding: 5px;
 }
 .aboutus__work-text span{
-  font-family: "Oxanium", sans-serif;
   color: var(--med-blue);
   font-weight: bold;
 }
@@ -533,7 +527,6 @@ transform: translate(-50%, -50%);
   margin-top: 30px;
 }
 
-
 .all-articles__box{
   display: flex;
   flex-direction: column;
@@ -557,6 +550,8 @@ transform: translate(-50%, -50%);
 .all-articles__article-img {
   display: flex; /*para poder justificar el Read more> a la derecha*/
   flex-direction: column;
+  justify-content: start; 
+  align-items: center;
   width: 50%; 
   flex: 0 0 50%;
 }
@@ -800,11 +795,7 @@ transform: translate(-50%, -50%);
   gap: 20px;
   margin: 0 auto;
 }
-.Aboutus__title{
-  position: relative;
-  top: 30px;
-  left: 100px;
-}
+
 .aboutus__video {
   grid-column: 2; 
   grid-row: 1; 
@@ -852,6 +843,8 @@ transform: translate(-50%, -50%);
   border-top: none;
   border-left: 1px solid var(--dark-blue);
 }
+
+
 .all-articles__box small{
   order: 0;
   padding: 50px;
@@ -897,14 +890,31 @@ transform: translate(-50%, -50%);
     grid-row: 2;
     flex-direction: column;
   }
+
+  /*=============== SERVICE===============*/
+.service-page__details{
+  width: 90%;
+  max-width: 1000px;
+}
 }
 
 
+
 /* parapantallas > 1600px */
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1000px){
   /*=============== ABOUT US PAGE===============*/
-  .timeline{
-    grid-column: 1;
-    grid-row: 1;
+  .aboutus__video{
+    position: relative;
+    display: flex;
   }
+  .aboutus__title{
+    position: absolute;
+    font-size: 50px;
+    z-index: 1;
+    padding: 50px 70px;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 10px var(--dark-blue) ;
+    }
 }
