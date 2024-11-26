@@ -487,8 +487,8 @@ footer{
   flex-direction: column;
   z-index: 0; /*para el efecto de integracion entre titulo y section*/
   margin-top: -1px;
+  margin-bottom: 30px;
   background-color: var(--white);
-  padding-bottom: 30px;
   justify-content: center;
   align-items: center; 
   border: 1px solid var(--dark-blue2); 
@@ -516,9 +516,10 @@ footer{
   max-width: 100%; /*de lo contrario el contenido ultrapasa el tamno del box*/
   height: auto;
 }
-.article-page__article-title{
+.highlights__article-title, .all-articles__article-title{
   text-decoration: none;
   color: var(--dark-blue);
+  padding-top: 20px;
 }
 .highlights__article-footer{
   display: flex;
@@ -534,34 +535,37 @@ footer{
   width: 100%;
   background-color: var(--white);
 }
-.all-articles__box small{
-  padding-left: 10px;
-  padding-bottom: 20px;
-  order: 2;
-}
-.all-articles__article{
-  display: flex;
+.all-articles__article {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto; 
+  gap: 1rem;
+  grid-template-areas:
+      "title img"
+      "paragraph paragraph"
+      "date date";
   padding: 20px;
 }
-.all-articles__article-content{
-  padding: 20px;
-  flex: 1;
+
+.all-articles__date {
+  grid-area: date;
 }
+
+.all-articles__article-title {
+  grid-area: title;
+}
+
+.all-articles__paragraph {
+  grid-area: paragraph;
+}
+
 .all-articles__article-img {
-  display: flex; /*para poder justificar el Read more> a la derecha*/
-  flex-direction: column;
-  justify-content: start; 
-  align-items: center;
-  width: 50%; 
-  flex: 0 0 50%;
+  grid-area: img;
 }
 .all-articles__article-img img{
   max-width: 100%;
   height: auto; 
   max-height: 200px; 
-}
-.all-articles__article-img a:last-child{
-  margin-left: auto;
 }
 
 /*===============FIN ARTICLES PAGE===============*/
@@ -832,7 +836,7 @@ footer{
 }
 
 /*=============== ARTICLES ===============*/
-.highlights, .all-articles__box{
+.highlights{
   flex-direction: row;
 }
 .highlights__article:first-child{
@@ -844,15 +848,47 @@ footer{
   border-left: 1px solid var(--dark-blue);
 }
 
+.articles-page__subtitle{
+  margin-top: 10px;
+  margin-left: 130px;
+}
+.all-articles{
+  max-width: 90%;
+  margin: auto;
+  margin-top: -1px;
+  margin-bottom: 30px;
+}
+.all-articles__article {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  grid-template-areas:
+      "date title img"
+      "date paragraph img";
+  padding: 20px;
+}
 
-.all-articles__box small{
-  order: 0;
-  padding: 50px;
-  white-space: nowrap;
+.all-articles__date {
+  grid-area: date;
+  margin: auto;
 }
-.all-articles__article-img a:last-child{
-  margin-left: 0;
+
+.all-articles__article-title {
+  grid-area: title;
 }
+
+.all-articles__paragraph {
+  grid-area: paragraph;
+}
+
+.all-articles__article-img {
+  grid-area: img;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 
 /*===============FOOTER===============*/
   footer{
