@@ -1,0 +1,89 @@
+
+/*=============== ABOUT US PAGE ===============*/
+.aboutus{
+    background: linear-gradient(to bottom, $dark-blue, $dark-blue2, $med-blue);
+    gap: 50px;
+    @include flex-layout (column);
+}
+
+.aboutus__video{
+    @include flex-layout (column, center, center);
+}
+.aboutus__video video{
+    margin: 5%;
+    max-width: 80%;
+}
+
+.aboutus__title, .aboutus__ourvision-title{
+    color: $med-blue;
+}
+.aboutus__title{
+    background: linear-gradient(to bottom, #fbfcf8, #fbfcf865);
+    margin-top: 30px;
+    padding: 20px;
+}
+/*carousel*/
+.carousel{
+    margin: 40px;
+}
+.carousel-title{
+    display: inline-block;
+    color: $dark-blue;
+    background-color: $gray;
+    padding: 10px;
+}
+.d-block{
+    box-shadow: 5px 5px 10px $dark-blue;
+}
+/* fin del carousel*/
+
+.aboutus__ourvision {
+    margin: 20px;
+    background-color: $gray;
+    color: $dark-blue;
+    padding: 60px;
+    margin-bottom: 50px;
+}
+
+.aboutus__work{
+    padding: 30px;
+    background-color: $white;
+    box-shadow: 0 0 20px $dark-blue ;
+}
+.aboutus__work-button-box{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    background: linear-gradient(to right, $gray, $white);
+    padding: 20px;
+    text-align: center;
+}
+.aboutus__work-button-box::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    @include size (100%, 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), $white);
+    z-index: -1;
+    filter: blur(10px); /* Ajusta la intensidad de la sombra */
+    transform: translateX(-10px); /* Coloca la sombra a la izquierda */
+}
+.aboutus__work-button-box {
+    h3{
+        color: $dark-blue;
+    padding-bottom: 30px;
+    }
+}
+.aboutus__work-text{
+    padding: 30px;
+    li{
+        padding: 5px;
+
+        span{
+            color: $med-blue;
+            font-weight: bold;
+        }
+    }
+}
+/*===============FIN ABOUT US PAGE===============*/

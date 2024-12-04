@@ -1,0 +1,46 @@
+
+/*===============SERVICE PAGE ===============*/
+.service-page_backgroud{
+    background-color: $gray;
+    margin: 0; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.service-page__title{
+    @include text-style (null, $med-blue, null, center);
+    margin: 0;
+    padding-bottom: 30px;
+}
+.service-page__details{
+    border: 1px solid $bright-blue; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin: 0 auto; 
+    background-color: $white;
+}
+.service-page__details{
+    p{
+        font-size: 15px;
+    }
+}
+.service-page__summary{
+    list-style: none;
+    cursor: pointer; 
+    padding: 5px; 
+    height: 70px;
+    font-size: 15px;
+}
+.service-page__summary {
+    img{
+        vertical-align: middle;
+    }
+}
+.services__icon, .expand-icon{
+    display: inline-block; /*para centralizar verticalmente*/
+    vertical-align: middle; 
+}
+.expand-icon{
+    margin-left: 10px; 
+    color: $med-blue;
+}
+/*=============== FIN DEL SERVICE PAGE ===============*/

@@ -13,6 +13,13 @@
         align-items: $align;
     }
 }
+@mixin translate-y{
+    animation: translate-y 3s ease;
+}
+@mixin opacity ($delay){
+    animation-delay: $delay;
+    animation: opacity 1s ease-in-out $delay forwards;
+}
 
 @mixin animated-gradient($colors...) {
     background-image: linear-gradient(to left, $colors...);

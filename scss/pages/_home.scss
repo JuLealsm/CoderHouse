@@ -1,0 +1,179 @@
+
+
+/* =============== INDEX ===============*/
+/*generales*/
+main, section, footer{
+    position: relative; /*en relacion al video*/
+    z-index: 2; /*estar adelante del vídeo pero detrás del menú del móvil*/
+}
+.line{
+    background-image: linear-gradient(to right, $light-blue, $bright-blue);
+    height: 2px;
+}
+  /* titles */
+.section-title {
+    padding: 25px;
+    background-image: linear-gradient(to left, $dark-blue, $dark-blue2);
+    @include text-style (17px, $white, normal, center);
+
+    h2{
+        @include text-style(30px)
+    }
+}
+.main-title{
+    margin: 0;
+    line-height: 1;
+    background-clip: text;
+    background-size: 500%;
+    @include text-style (60px, transparent, 600);
+    @include animated-gradient ($med-blue, $bright-blue, $light-blue);
+}
+
+/*-----background video------*/
+.video-background {
+    position: relative;
+    overflow: hidden;
+    @include size (100%, 100%);
+}
+.video-background {
+    video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%); /* Centraliza el vídeo */
+        @include size (auto, auto);
+        min-width: 100%; 
+        min-height: 100%; 
+    }
+}
+
+/*------PARTE 1 - Presentacion------*/
+
+.presentation {
+    @include flex-layout (column, center, center);
+    @include translate-y;
+    @include size (100%, auto);
+    gap: 10px; 
+    padding-top: 50px;
+    background-color: #d1d2d885;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.presentation__box-1 {
+    padding: 20px;
+
+    h2{
+        @include text-style(null, $dark-blue);
+    }
+}
+.presentation__box-2{
+    background-color: #e7ecefb2 ;
+    padding: 40px 50px;
+    border-radius: 5px;
+    line-height: 2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.280);
+
+    span{
+        @include text-style (null, $med-blue, bold);
+    }
+}
+.presentation__box-3 {
+    justify-content: center;
+    margin-top: 0; 
+    padding: 50px;
+}
+
+
+/*---- PARTE 2 - Servicios ------*/
+.services {
+    width: 100%;
+    background-color: $gray;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.services__box{
+    @include flex-layout (column);
+    background-color: $white;
+    padding: 20px;
+    transition: background-color 0.4s ease;
+    opacity: 0;
+
+    &:nth-child(1) {
+        @include opacity(0s); 
+    }
+    
+    &:nth-child(2) {
+        @include opacity(0.5s);
+    }
+    &:nth-child(3) {
+        @include opacity(1s);
+    }
+    
+    &:nth-child(4) {
+        @include opacity(1.5s); 
+    }
+    
+    &:nth-child(5) {
+        @include opacity(2s);
+    }
+    
+    &:nth-child(6) {
+        @include opacity(2.5s);
+    }
+
+    &:hover{
+        background-color: $light-blue;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+
+        &:last-child{
+            margin-left: auto;
+            padding-top: 20px;
+        }
+    }
+}
+
+
+.services__icon{
+    @include size (54px, 54px);
+}
+.services__title{
+    padding-bottom: 10px;
+    @include text-style (15px, $dark-blue);
+}
+
+/*---- PARTE 3 - WHY SafeBox ------*/
+.whysafebox {
+    padding: 20px;
+    background-color: #e5e5e5ba;
+    margin: 10px;
+    color: $dark-blue;
+
+    p:first-child {
+        padding-top: 50px;
+    }
+}
+
+.whysafebox__reasons-wrap{
+    justify-items: center;
+}
+.whysafebox__reasons{
+    justify-items: center;
+    text-align: center;
+    background-color: $dark-blue;
+    color: $white;
+    border-radius: 3px;
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+}
+.whysafebox__reasons-icon{
+    @include size (50px, 50px);
+}
+/* =============== FIN INDEX ===============*/

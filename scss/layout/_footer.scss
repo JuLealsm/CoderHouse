@@ -1,0 +1,55 @@
+
+
+/*=============== FOOTER ===============*/
+footer{
+    @include flex-layout (column, center, center);
+    background-color: $dark-blue;
+    margin: 0;
+    padding: 0;
+}
+.footer__logo{
+    @include size (64px, 64px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Social-media-icons{
+    img{
+        @include size (15px, 15px);
+        cursor: pointer; 
+        margin-left: 10px;
+    }
+}
+.footer__nav {
+    a {
+        text-decoration: none;
+        @include text-style (15px, $white)
+    }
+
+    h4 {
+        padding-top: 20px;
+        @include text-style (12px, $bright-blue)
+    }
+
+    li {
+        list-style: none;
+    }
+}
+.footer__TC-links {
+    a {
+        text-decoration: none;
+        @include text-style (15px, $white)
+    }
+}
+
+.footer__button{
+    padding-top: 20px;
+}
+
+.footer__TC-links{
+    @include flex-layout (null, center, center);
+    @include text-style (9px, $white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px; 
+}
+/*=============== FIN DEL FOOTER ===============*/

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*color palette*/
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +13,42 @@ body {
   font-family: "Oxanium", sans-serif;
 }
 
+/* ANIMACION PARA EL H1 Y HEADER__BUTTON*/
+@keyframes animate {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+@keyframes translate-y {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*color palette*/
 /*--(Mobile First)--*/
 /*===============HEADER===============*/
 header {
-  background-image: linear-gradient(to left, #142850, #27496d);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-image: linear-gradient(to left, #142850, #27496d);
   padding: 0 20px;
   font-size: 20px;
   position: relative;
@@ -37,7 +65,8 @@ header {
 }
 
 .header__checkbox:checked ~ .header__nav {
-  display: flex; /*muestra el header__nav*/
+  display: flex;
+  /*muestra el header__nav*/
 }
 
 .header__open-nav-button {
@@ -92,6 +121,7 @@ header {
 
 .header__button:hover {
   border: none;
+  cursor: pointer;
   background-image: linear-gradient(to left, #0c7b93, #08b1a8, #c1dadf);
   animation: animate 10s linear infinite;
   background-size: 500%;
@@ -199,7 +229,7 @@ main, section, footer {
   margin: 0;
   line-height: 1;
   background-clip: text;
-  -webkit-background-size: 500%;
+  background-size: 500%;
   font-size: 60px;
   font-weight: 600;
   color: transparent;
@@ -235,26 +265,32 @@ main, section, footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: translate-y 3s ease;
+  width: 100%;
+  height: auto;
   gap: 10px;
+  padding-top: 50px;
   background-color: rgba(209, 210, 216, 0.5215686275);
   background-size: 100% 100%;
   background-attachment: fixed;
-  width: 100%;
-  height: auto;
 }
 
 .presentation__box-1 {
   padding: 20px;
 }
+.presentation__box-1 h2 {
+  font-weight: normal;
+  color: #142850;
+  font-weight: normal;
+}
 
 .presentation__box-2 {
   background-color: rgba(231, 236, 239, 0.6980392157);
-  padding: 15px 50px;
+  padding: 40px 50px;
   border-radius: 5px;
   line-height: 2;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.28);
 }
-
 .presentation__box-2 span {
   font-weight: bold;
   color: #0c7b93;
@@ -267,18 +303,6 @@ main, section, footer {
   padding: 50px;
 }
 
-/* ANIMACION PARA EL H1 Y HEADER__BUTTON*/
-@keyframes animate {
-  0% {
-    background-position: 0 100%;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0 100%;
-  }
-}
 /*---- PARTE 2 - Servicios ------*/
 .services {
   width: 100%;
@@ -294,6 +318,31 @@ main, section, footer {
   background-color: #fbfcf8;
   padding: 20px;
   transition: background-color 0.4s ease;
+  opacity: 0;
+}
+.services__box:nth-child(1) {
+  animation-delay: 0s;
+  animation: opacity 1s ease-in-out 0s forwards;
+}
+.services__box:nth-child(2) {
+  animation-delay: 0.5s;
+  animation: opacity 1s ease-in-out 0.5s forwards;
+}
+.services__box:nth-child(3) {
+  animation-delay: 1s;
+  animation: opacity 1s ease-in-out 1s forwards;
+}
+.services__box:nth-child(4) {
+  animation-delay: 1.5s;
+  animation: opacity 1s ease-in-out 1.5s forwards;
+}
+.services__box:nth-child(5) {
+  animation-delay: 2s;
+  animation: opacity 1s ease-in-out 2s forwards;
+}
+.services__box:nth-child(6) {
+  animation-delay: 2.5s;
+  animation: opacity 1s ease-in-out 2.5s forwards;
 }
 .services__box:hover {
   background-color: #c1dadf;
@@ -352,56 +401,6 @@ main, section, footer {
 }
 
 /* =============== FIN INDEX ===============*/
-/*===============SERVICE PAGE ===============*/
-.service-page_backgroud {
-  background-color: #e5e5e5;
-  margin: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.service-page__title {
-  color: #0c7b93;
-  text-align: center;
-  margin: 0;
-  padding-bottom: 30px;
-}
-
-.service-page__details {
-  border: 1px solid #08b1a8;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 0 auto;
-  background-color: #fbfcf8;
-}
-
-.service-page__details p {
-  font-size: 15px;
-}
-
-.service-page__summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 5px;
-  height: 70px;
-  font-size: 15px;
-}
-
-.service-page__summary img {
-  vertical-align: middle;
-}
-
-.services__icon, .expand-icon {
-  display: inline-block; /*para centralizar verticalmente*/
-  vertical-align: middle;
-}
-
-.expand-icon {
-  margin-left: 10px;
-  color: #0c7b93;
-}
-
-/*=============== FIN DEL SERVICE PAGE ===============*/
 /*=============== ABOUT US PAGE ===============*/
 .aboutus {
   background: linear-gradient(to bottom, #142850, #27496d, #0c7b93);
@@ -502,6 +501,56 @@ main, section, footer {
 }
 
 /*===============FIN ABOUT US PAGE===============*/
+/*===============SERVICE PAGE ===============*/
+.service-page_backgroud {
+  background-color: #e5e5e5;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.service-page__title {
+  color: #0c7b93;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.service-page__details {
+  border: 1px solid #08b1a8;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fbfcf8;
+}
+
+.service-page__details p {
+  font-size: 15px;
+}
+
+.service-page__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 5px;
+  height: 70px;
+  font-size: 15px;
+}
+
+.service-page__summary img {
+  vertical-align: middle;
+}
+
+.services__icon, .expand-icon {
+  display: inline-block; /*para centralizar verticalmente*/
+  vertical-align: middle;
+}
+
+.expand-icon {
+  margin-left: 10px;
+  color: #0c7b93;
+}
+
+/*=============== FIN DEL SERVICE PAGE ===============*/
 /*===============ARTICLES PAGE===============*/
 .articles-background {
   background-color: #e5e5e5;
@@ -979,6 +1028,7 @@ main, section, footer {
     margin: 40px;
   }
   .other-contact__location {
+    margin: 40px;
     width: 50%;
     max-width: 400px;
   }

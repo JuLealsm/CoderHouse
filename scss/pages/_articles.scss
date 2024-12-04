@@ -1,0 +1,105 @@
+
+/*===============ARTICLES PAGE===============*/
+.articles-background{
+    background-color: $gray;
+}
+.articles-page__title{
+    padding-top: 40px;
+    margin: 0;
+    font-family: "Oxanium", sans-serif;
+    @include text-style (null, $med-blue, null, center)
+}
+.articles-page__subtitle{
+    display: inline-block;
+    position: relative;
+    z-index: 1; /*para el efecto de integracion entre titulo y section*/
+    margin-top: 50px;
+    margin-left: 15px;
+    padding: 5px;
+    border: 1px solid $dark-blue2; 
+    border-bottom: none;
+    background-color: $white;
+    font-family: "Oxanium", sans-serif;
+    @include text-style (null, $dark-blue, 800)
+}
+
+.highlights, .all-articles{
+    @include flex-layout (column, center, center);
+    @include text-style (null, auto, 100%);
+    position: relative;
+    z-index: 0; /*para el efecto de integracion entre titulo y section*/
+    margin-top: -1px;
+    margin-bottom: 30px;
+    background-color: $white;
+    padding-bottom: 30px;
+    border: 1px solid $dark-blue2; 
+}
+.highlights__article{
+    @include flex-layout (column, center, center);
+    background-color: $white;
+    padding: 20px;
+    margin: 20px auto;
+}
+.highlights__article:last-child{
+    border-top: 1px solid var(--dark-blue);
+}
+.highlights__article-content{
+    @include flex-layout (column, center, center);
+    gap: 10px;
+}
+.highlights__article-content {
+    img{
+        @include size (null, auto, 100%);
+    }
+}
+.highlights__article-title, .all-articles__article-title{
+    text-decoration: none;
+    color: $dark-blue;
+    padding-top: 20px;
+}
+.highlights__article-footer{
+    @include flex-layout(null, space-between);
+    width: 100%;
+    margin-top: 30px;
+}
+
+.all-articles__box{
+    @include flex-layout(column);
+    border-bottom: 1px solid $dark-blue2;
+    width: 100%;
+    background-color: $white;
+}
+.all-articles__article {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    gap: 1rem;
+    grid-template-areas:
+        "title img"
+        "paragraph paragraph"
+        "date date";
+    padding: 20px;
+}
+
+.all-articles__date {
+    grid-area: date;
+}
+
+.all-articles__article-title {
+    grid-area: title;
+}
+
+.all-articles__paragraph {
+    grid-area: paragraph;
+}
+
+.all-articles__article-img {
+    grid-area: img;
+}
+.all-articles__article-img{
+    img{
+        @include size (null, auto, 100%, 200px);
+    }
+}
+
+/*===============FIN ARTICLES PAGE===============*/

@@ -1,0 +1,67 @@
+/*--(Mobile First)--*/
+/*===============HEADER===============*/
+header{
+    @include flex-layout (null, space-between, center);
+    background-image: linear-gradient(to left, $dark-blue, $dark-blue2);
+    padding: 0 20px;
+    font-size: 20px;
+    position: relative;
+    z-index: 10; /*para que el menu mobile aparezca*/
+}
+.logo{
+    @include size (64px, 64px);
+}
+.header__checkbox{
+    display: none;
+}
+.header__checkbox:checked ~ .header__nav{
+    @include flex-layout ();                           /*muestra el header__nav*/
+}
+.header__open-nav-button{
+    position: absolute;
+    right: 10px;
+    color: $bright-blue;
+    @include text-style (2em, null, 600);
+}
+.header__nav {
+    display: none;
+    background-image: linear-gradient(to left, $dark-blue, $dark-blue2);
+    position:absolute;
+    top: 0;
+    z-index: -1; /*para que aparezca el menú en mobile*/
+    @include size (100vw, 100vh);
+}
+.header__nav-list{
+    @include flex-layout (column);
+    height: 40vh;
+    margin: auto;
+    list-style-type:none;
+}
+.header__nav-list-links {
+    li {
+    margin-bottom: 15px;
+    }
+        a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+        color: $bright-blue;
+        }
+    }
+}
+
+.header__button{
+    background-color: transparent;
+    border: 1px solid $bright-blue;
+    border-radius: 3px;
+    padding: 10px;
+    font-family: "Oxanium", sans-serif;
+    @include text-style (17px, $bright-blue);
+}
+.header__button:hover{
+    border: none;
+    cursor: pointer;
+    @include animated-gradient($med-blue, $bright-blue, $light-blue);
+}
+/*=============== FIN HEADER===============*/
