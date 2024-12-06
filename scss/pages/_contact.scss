@@ -20,6 +20,8 @@
 }
 .contact-section__form{
     @include flex-layout (column);
+    opacity: 0;
+    @include opacity (0.5s);
     background-color: $white;
     box-shadow: 0 0 5px $dark-blue;
     border-radius: 5px;

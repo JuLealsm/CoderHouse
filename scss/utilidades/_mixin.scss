@@ -14,7 +14,7 @@
     }
 }
 @mixin translate-y{
-    animation: translate-y 3s ease;
+    animation: translate-y 3s ease forwards;
 }
 @mixin opacity ($delay){
     animation-delay: $delay;
@@ -22,11 +22,18 @@
 }
 
 @mixin animated-gradient($colors...) {
-    background-image: linear-gradient(to left, $colors...);
+    background-image: linear-gradient(to left, $colors);
     animation: animate 10s linear infinite;
     background-size: 500%;
 }
 
+@mixin float{
+    animation: float 3s ease-in-out infinite;
+}
+
+@mixin width-up{
+    transform: scale(1.2);
+}
 @mixin text-style($size, $color: null, $weight: normal, $align: null) {
     font-size: $size;
     font-weight: $weight;

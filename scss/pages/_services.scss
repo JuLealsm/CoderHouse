@@ -17,24 +17,72 @@
     padding: 10px; 
     margin: 0 auto; 
     background-color: $white;
-}
-.service-page__details{
-    p{
+    opacity: 0;
+
+    &:nth-child(2) {
+        @include opacity(0s); 
+    }
+    
+    &:nth-child(3) {
+        @include opacity(0.5s);
+    }
+    &:nth-child(4) {
+        @include opacity(1s);
+    }
+    
+    &:nth-child(5) {
+        @include opacity(1.5s); 
+    }
+    
+    &:nth-child(6) {
+        @include opacity(2s);
+    }
+    
+    &:nth-child(7) {
+        @include opacity(2.5s);
+    }
+
+    &:hover{
+        background-color: $light-blue;
+        border: 2px solid $bright-blue; 
+    }
+
+    .service-page__summary{
+        list-style: none;
+        cursor: pointer; 
+        padding: 5px; 
+        height: 70px;
         font-size: 15px;
+
+        img{
+            vertical-align: middle;
+        }
+    }
+
+    p{
+        @include text-style(15px);
+        padding: 20px;
+    }
+
+    ul{
+        li{
+            @include text-style(14px);
+            padding: 10px;
+            margin-left: 30px;
+            span{
+                @include text-style(14px, $dark-blue, bold);
+            }
+        }
+    }
+
+    .service-page__details-link{
+        @include text-style (14px, $med-blue);
+        text-decoration: none;
+        font-family: "Oxanium", sans-serif;
+        padding: 20px;
     }
 }
-.service-page__summary{
-    list-style: none;
-    cursor: pointer; 
-    padding: 5px; 
-    height: 70px;
-    font-size: 15px;
-}
-.service-page__summary {
-    img{
-        vertical-align: middle;
-    }
-}
+
 .services__icon, .expand-icon{
     display: inline-block; /*para centralizar verticalmente*/
     vertical-align: middle; 

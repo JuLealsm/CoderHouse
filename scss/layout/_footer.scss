@@ -1,12 +1,7 @@
 
 
 /*=============== FOOTER ===============*/
-footer{
-    @include flex-layout (column, center, center);
-    background-color: $dark-blue;
-    margin: 0;
-    padding: 0;
-}
+
 .footer__logo{
     @include size (64px, 64px);
     margin-top: 10px;

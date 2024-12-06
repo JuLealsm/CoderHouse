@@ -42,11 +42,14 @@ header{
     margin-bottom: 15px;
     }
         a {
+        display: inline-block;
         color: $white;
         text-decoration: none;
+        transition: transform 0.3s ease;
 
         &:hover {
         color: $bright-blue;
+        transform: scale(1.2);
         }
     }
 }
@@ -57,11 +60,13 @@ header{
     border-radius: 3px;
     padding: 10px;
     font-family: "Oxanium", sans-serif;
-    @include text-style (17px, $bright-blue);
+    @include text-style(17px, $bright-blue);
+
+    &:hover{
+        border: none;
+        cursor: pointer;
+        @include animated-gradient($med-blue, $bright-blue, $light-blue);
+    }
 }
-.header__button:hover{
-    border: none;
-    cursor: pointer;
-    @include animated-gradient($med-blue, $bright-blue, $light-blue);
-}
+
 /*=============== FIN HEADER===============*/
