@@ -1,5 +1,5 @@
 /*--(Mobile First)--*/
-/*===============HEADER===============*/
+/*=============== HEADER ===============*/
 header{
     @include flex-layout (null, space-between, center);
     background-image: linear-gradient(to left, $dark-blue, $dark-blue2);

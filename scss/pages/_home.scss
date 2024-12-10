@@ -2,7 +2,7 @@
 
 /* =============== INDEX ===============*/
 /*generales*/
-main, section, footer{
+main, section{
     position: relative; /*en relacion al video*/
     z-index: 2; /*estar adelante del vídeo pero detrás del menú del móvil*/
 }
@@ -34,8 +34,7 @@ main, section, footer{
     position: relative;
     overflow: hidden;
     @include size (100%, 100%);
-}
-.video-background {
+
     video{
         position: absolute;
         top: 50%;

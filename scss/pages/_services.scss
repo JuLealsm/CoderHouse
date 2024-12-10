@@ -1,11 +1,32 @@
 
 /*===============SERVICE PAGE ===============*/
 .service-page_backgroud{
-    background-color: $gray;
+    background-color: #d1d2d8a6;
     margin: 0; 
     padding-top: 50px;
     padding-bottom: 50px;
+    position: relative; /*en relacion al video*/
+    z-index: 2; /*estar adelante del vídeo pero detrás del menú del móvil*/
 }
+/*-----background video------*/
+.video-background {
+    position: relative;
+    overflow: hidden;
+    @include size (100%, 100%);
+
+    video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%); /* Centraliza el vídeo */
+        @include size (auto, auto);
+        min-width: 100%; 
+        min-height: 100%; 
+    }
+}
+
+
 .service-page__title{
     @include text-style (null, $med-blue, null, center);
     margin: 0;
@@ -83,11 +104,12 @@
     }
 }
 
-.services__icon, .expand-icon{
+.services__icon{
     display: inline-block; /*para centralizar verticalmente*/
     vertical-align: middle; 
 }
 .expand-icon{
+    @extend .services__icon;
     margin-left: 10px; 
     color: $med-blue;
 }

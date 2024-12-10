@@ -4,6 +4,7 @@
 .contac-section{
     @include flex-layout (column);
     background-image: linear-gradient(to left, $dark-blue, $dark-blue2);
+    padding: 70px;
 }
 .contact-section__part1{
     margin: 20px;
@@ -27,8 +28,7 @@
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
-}
-.contact-section__form{
+
     legend{
         margin-bottom: 20px;
         font-size: 1.2em;
@@ -69,15 +69,19 @@
     }
 }
 
+
 .other-contact{
     @include flex-layout (column, null, center);
     background-color: $gray;
+    padding: 70px;
 
     img{
         @include size (20px, 20px);
     }
 }
 .other-contact__channels {
+    margin-top: 40px;
+
     h2{
         padding-bottom: 30px;
     }
@@ -96,9 +100,7 @@
     font-family: "Oxanium", sans-serif;
     @include text-style (null, $dark-blue2, bold);
 }
-.other-contact__channels{
-    margin-top: 40px;
-}
+
 .other-contact__location{
     @extend .other-contact__channels;
     margin-bottom: 40px;
@@ -107,8 +109,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* para preservar el Aspect Ratio */
-}
-.other-contact__location-map {
+
     iframe{
         position: absolute;
         top: 0;
@@ -117,5 +118,6 @@
         @include size (100%, 100%);
     }
 }
+
 
 /*=============== FIN CONTACT PAGE===============*/

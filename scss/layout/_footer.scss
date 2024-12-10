@@ -1,25 +1,34 @@
 
-
 /*=============== FOOTER ===============*/
+footer{
+    position: relative; /*en relacion al video*/
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-blue;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer__logo{
-    @include size (64px, 64px);
-    margin-top: 10px;
-    margin-bottom: 10px;
+        @include size (64px, 64px);
+        margin-top: 10px;
+        margin-bottom: 10px;
 }
-.Social-media-icons{
-    img{
-        @include size (15px, 15px);
-        cursor: pointer; 
-        margin-left: 10px;
-    }
-}
-.footer__nav {
-    a {
-        text-decoration: none;
-        @include text-style (15px, $white)
-    }
 
+.Social-media-icons{
+    a{
+        img{
+            @include size (15px, 15px);
+            cursor: pointer; 
+            margin: 0 10px;
+        }
+    }
+}
+
+.footer__nav {
     h4 {
         padding-top: 20px;
         @include text-style (12px, $bright-blue)
@@ -27,12 +36,11 @@
 
     li {
         list-style: none;
-    }
-}
-.footer__TC-links {
-    a {
-        text-decoration: none;
-        @include text-style (15px, $white)
+
+        a {
+            text-decoration: none;
+            @include text-style (15px, $white)
+        }
     }
 }
 
@@ -40,11 +48,17 @@
     padding-top: 20px;
 }
 
-.footer__TC-links{
+.footer__TC-links {
     @include flex-layout (null, center, center);
     @include text-style (9px, $white);
     padding-top: 20px;
     padding-bottom: 20px;
     gap: 20px; 
+
+    a {
+        text-decoration: none;
+        @include text-style (15px, $white)
+    }
 }
 /*=============== FIN DEL FOOTER ===============*/
+

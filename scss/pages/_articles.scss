@@ -39,19 +39,20 @@
     background-color: $white;
     padding: 20px;
     margin: 20px auto;
-}
-.highlights__article:last-child{
-    border-top: 1px solid var(--dark-blue);
+
+    &:last-child{
+        border-top: 1px solid $dark-blue;
+    }
 }
 .highlights__article-content{
     @include flex-layout (column, center, center);
     gap: 10px;
-}
-.highlights__article-content {
+
     img{
         @include size (null, auto, 100%);
     }
 }
+
 .highlights__article-title, .all-articles__article-title{
     text-decoration: none;
     color: $dark-blue;
@@ -95,8 +96,7 @@
 
 .all-articles__article-img {
     grid-area: img;
-}
-.all-articles__article-img{
+
     img{
         @include size (null, auto, 100%, 200px);
     }

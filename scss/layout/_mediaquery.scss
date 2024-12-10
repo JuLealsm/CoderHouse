@@ -3,36 +3,37 @@
 /* ################################################ RESPONSIVIDAD para TABLET / PC #######################################################*/
 
 @media screen and (min-width: 800px){
-    /*===============HEADER===============*/
+/*===============HEADER===============*/
     .header__open-nav-button{
-    display: none
+        display: none
     }
     .header__nav{
-    display: flex;
-    position: static; /*saca el position absolute*/
-    justify-content: space-between;
-    background-image: none;
-    @include size (100%, auto);
+        display: flex;
+        position: static; /*saca el position absolute*/
+        justify-content: space-between;
+        background-image: none;
+        @include size (100%, auto);
     }
     .header__nav-list{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: auto;
-    @include size (100%, auto);
-    }
-    .header__nav-list-links{
-    display: flex; /* Flex para elementos de la izquierda*/
-    justify-content: center;
-    flex-grow: 1; /* Permite ocupar el espacio restante. */
-    }
-    .header__nav-list{
-        li{
-            margin: 0 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        @include size (100%, auto);
         }
-    }
+    .header__nav-list-links{
+        display: flex; /* Flex para elementos de la izquierda*/
+        justify-content: center;
+        flex-grow: 1; /* Permite ocupar el espacio restante. */
+        }
+    .header__nav-list{
+            li{
+                margin: 0 10px;
+            }
+        }
+    
 
-    /*===============FOOTER===============*/
+/*===============FOOTER===============*/
     footer{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -68,9 +69,9 @@
         grid-row: 2;
         flex-direction: column;
     }
-    /*=============== FIN del FOOTER===============*/
 
-    /* =============== INDEX ===============*/
+    
+/*=============== INDEX ===============*/
     /*----------PARTE 1 - Presentacion ------------*/
     .presentation {
     display: grid; 
@@ -132,7 +133,7 @@
             overflow: visible;
         }
     }
-    /*=============== ARTICLES ===============*/
+/*=============== ARTICLES ===============*/
     .highlights{
         flex-direction: row;
         align-items: flex-start;
@@ -192,7 +193,7 @@
         @include flex-layout (column, null, flex-start)
     }
 
-    /*=============== CONTACT PAGE===============*/
+/*=============== CONTACT PAGE===============*/
     .contac-section, .other-contact{
         @include flex-layout (row, center);
     }
@@ -223,7 +224,7 @@
 
 
 @media screen and (min-width: 1024px){
-    /*=============== ABOUT US PAGE===============*/
+/*=============== ABOUT US PAGE===============*/
     
     .carousel-content{
     @include flex-layout(row, null, center);
