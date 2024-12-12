@@ -33,6 +33,7 @@
     padding-bottom: 30px;
 }
 .service-page__details{
+    position: relative;
     border: 1px solid $bright-blue; 
     border-radius: 5px; 
     padding: 10px; 
@@ -69,11 +70,11 @@
     }
 
     .service-page__summary{
+        @include text-style(15px, $dark-blue2, bold);
         list-style: none;
         cursor: pointer; 
         padding: 5px; 
         height: 70px;
-        font-size: 15px;
 
         img{
             vertical-align: middle;
@@ -81,17 +82,24 @@
     }
 
     p{
-        @include text-style(15px);
+        @include text-style(17px);
         padding: 20px;
     }
 
     ul{
+        list-style: none;
         li{
-            @include text-style(14px);
+            @include flex-layout (column, center, center);
+            @include text-style(14px, null, null, center);
             padding: 10px;
             margin-left: 30px;
+            
+            img{
+                @include size(80px, 80px);
+                padding-bottom: 10px;
+            }
             span{
-                @include text-style(14px, $dark-blue, bold);
+                @include text-style (14px, $med-blue, bold)
             }
         }
     }
@@ -104,12 +112,7 @@
     }
 }
 
-.services__icon{
-    display: inline-block; /*para centralizar verticalmente*/
-    vertical-align: middle; 
-}
 .expand-icon{
-    @extend .services__icon;
     margin-left: 10px; 
     color: $med-blue;
 }

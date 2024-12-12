@@ -123,14 +123,54 @@
 /*=============== SERVICES===============*/
     
     .service-page__details{
-        @include size (90%, auto, 1000px)
+        @include size (90%, auto, 1000px);
+
+        ul{
+            @include flex-layout (row, center, center);
+        }
     }
 
 /*=============== ABOUT US===============*/
-    .aboutus__ourvision {
+    .aboutus__ourvision{
+        @include flex-layout (row, center, center);
+        padding: 60px;
+
+        h2{
+            img{
+            @include size (200px, 200px);
+        }
         p{
-            max-height: none; /* Sem altura máxima para telas grandes */
+            text-align: justify;
+        }
+            
+    }
+}
+
+    .aboutus__giving-back {
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "title title"
+        "paragraph img";
+        gap: 1rem;
+        padding: 60px;
+        justify-items: center;
+        max-width: 1200px;
+
+        h2{
+            grid-area: title;
+        }
+        
+        img{
+            @include size(250px, 250px);
+            grid-area: img;
+        };
+        p{
+            grid-area: paragraph;
+            max-height: none; 
             overflow: visible;
+            text-align: justify;
         }
     }
 /*=============== ARTICLES ===============*/

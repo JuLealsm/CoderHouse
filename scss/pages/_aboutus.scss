@@ -5,7 +5,7 @@
     @include flex-layout (column, center, center);
 }
 
-.aboutus__title, .aboutus__ourvision-title{
+.aboutus__title{
     color: $bright-blue;
 }
 .aboutus__title{
@@ -41,18 +41,45 @@
 }
 /* fin del carousel*/
 
-.aboutus__ourvision {
+.aboutus__ourvision{
     margin: 40px;
-    background-color: $gray;
-    color: $dark-blue;
-    padding: 60px;
+    color: $white;
+    padding: 20px;
+    @include flex-layout (column, center, center);
+    text-align: center;
+
+    h2{
+        @include flex-layout (column, center, center);
+        color: $bright-blue;
+
+        img{
+            @include size (130px, 130px);
+        }
+    }
+}
+.aboutus__giving-back {
+    @include flex-layout (column, center, center);
+    margin: 40px;
+    background-color: $med-blue;
+    color: $gray;
+    padding: 20px;
     margin-bottom: 50px;
+    border-radius: 5px;
     @include translate-y;
 
+    h2{
+        @include text-style (null, $dark-blue, 600);
+    }
     p{
-        max-height: 150px; 
+        max-height: 300px; 
         overflow-y: auto; 
         padding-right: 10px; 
+        text-align: center;
+    }
+
+    img{
+        @include size(200px, 200px);
+        margin: 20px 0;
     }
 }
 
@@ -78,11 +105,11 @@
         @include size (100%, 100%);
         background: linear-gradient(to right, rgba(0, 0, 0, 0.5), $white);
         z-index: -1;
-        filter: blur(10px); /* Ajusta la intensidad de la sombra */
+        filter: blur(10px);
         transform: translateX(-10px); /* Coloca la sombra a la izquierda */
     }
 
-    h3{
+    h2{
         color: $dark-blue;
         padding-bottom: 30px;
     }

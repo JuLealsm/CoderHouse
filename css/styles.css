@@ -373,7 +373,7 @@ main, section {
   padding-top: 20px;
 }
 
-.services__icon, .expand-icon {
+.services__icon {
   width: 54px;
   height: 54px;
 }
@@ -427,7 +427,7 @@ main, section {
   align-items: center;
 }
 
-.aboutus__title, .aboutus__ourvision-title {
+.aboutus__title {
   color: #08b1a8;
 }
 
@@ -474,16 +474,54 @@ main, section {
 /* fin del carousel*/
 .aboutus__ourvision {
   margin: 40px;
-  background-color: #e5e5e5;
-  color: #142850;
-  padding: 60px;
+  color: #fbfcf8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.aboutus__ourvision h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #08b1a8;
+}
+.aboutus__ourvision h2 img {
+  width: 130px;
+  height: 130px;
+}
+
+.aboutus__giving-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background-color: #0c7b93;
+  color: #e5e5e5;
+  padding: 20px;
   margin-bottom: 50px;
+  border-radius: 5px;
   animation: translate-y 3s ease forwards;
 }
-.aboutus__ourvision p {
-  max-height: 150px;
+.aboutus__giving-back h2 {
+  font-weight: 600;
+  color: #142850;
+  font-weight: 600;
+}
+.aboutus__giving-back p {
+  max-height: 300px;
   overflow-y: auto;
   padding-right: 10px;
+  text-align: center;
+}
+.aboutus__giving-back img {
+  width: 200px;
+  height: 200px;
+  margin: 20px 0;
 }
 
 .aboutus__work {
@@ -513,10 +551,10 @@ main, section {
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), #fbfcf8);
   z-index: -1;
-  filter: blur(10px); /* Ajusta la intensidad de la sombra */
+  filter: blur(10px);
   transform: translateX(-10px); /* Coloca la sombra a la izquierda */
 }
-.aboutus__work-button-box h3 {
+.aboutus__work-button-box h2 {
   color: #142850;
   padding-bottom: 30px;
 }
@@ -586,6 +624,7 @@ main, section {
 }
 
 .service-page__details {
+  position: relative;
   border: 1px solid #08b1a8;
   border-radius: 5px;
   padding: 10px;
@@ -622,32 +661,46 @@ main, section {
   border: 2px solid #08b1a8;
 }
 .service-page__details .service-page__summary {
+  font-size: 15px;
+  font-weight: bold;
+  color: #27496d;
+  font-weight: bold;
   list-style: none;
   cursor: pointer;
   padding: 5px;
   height: 70px;
-  font-size: 15px;
 }
 .service-page__details .service-page__summary img {
   vertical-align: middle;
 }
 .service-page__details p {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   font-weight: normal;
   padding: 20px;
 }
+.service-page__details ul {
+  list-style: none;
+}
 .service-page__details ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
-  font-weight: normal;
-  font-weight: normal;
+  text-align: center;
   padding: 10px;
   margin-left: 30px;
+}
+.service-page__details ul li img {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 10px;
 }
 .service-page__details ul li span {
   font-size: 14px;
   font-weight: bold;
-  color: #142850;
+  color: #0c7b93;
   font-weight: bold;
 }
 .service-page__details .service-page__details-link {
@@ -658,11 +711,6 @@ main, section {
   text-decoration: none;
   font-family: "Oxanium", sans-serif;
   padding: 20px;
-}
-
-.services__icon, .expand-icon {
-  display: inline-block; /*para centralizar verticalmente*/
-  vertical-align: middle;
 }
 
 .expand-icon {
@@ -1035,10 +1083,50 @@ main, section {
     height: auto;
     max-width: 1000px;
   }
+  .service-page__details ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   /*=============== ABOUT US===============*/
-  .aboutus__ourvision p {
-    max-height: none; /* Sem altura máxima para telas grandes */
+  .aboutus__ourvision {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  }
+  .aboutus__ourvision h2 img {
+    width: 200px;
+    height: 200px;
+  }
+  .aboutus__ourvision h2 p {
+    text-align: justify;
+  }
+  .aboutus__giving-back {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title title" "paragraph img";
+    gap: 1rem;
+    padding: 60px;
+    justify-items: center;
+    max-width: 1200px;
+  }
+  .aboutus__giving-back h2 {
+    grid-area: title;
+  }
+  .aboutus__giving-back img {
+    width: 250px;
+    height: 250px;
+    grid-area: img;
+  }
+  .aboutus__giving-back p {
+    grid-area: paragraph;
+    max-height: none;
     overflow: visible;
+    text-align: justify;
   }
   /*=============== ARTICLES ===============*/
   .highlights {
