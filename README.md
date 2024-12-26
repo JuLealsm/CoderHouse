@@ -10,14 +10,24 @@ Use local links and images to maintain file structure integrity.
 Demonstrate understanding of key web development concepts.
 
 📁 Folder Structure
-bash
+bash 
+
 Safebox/
+
 │
+
 ├── css/              # CSS styles
+
 ├── images/           # Folder containing image assets
+
 ├── pages/            # Folder seconday webpages
+
+├── scss/            # SCSS modular codes
+
 ├── .gitignore        # Instructions for files and folders to be ignored
+
 ├── index.html        # Main webpage file
+
 ├── README.md         # This file
 
 
